@@ -25,7 +25,18 @@
         </ul>
         <button onclick="randomWisdom()">ランダムに悟る</button>
         <br>
-        <button onclick="reAlert()">注意事項</button>
+        <button onclick="showPopup()">注意事項</button>
+    </div>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <h2>注意事項</h2>
+            <p>・無断転載禁止</p>
+            <p>・暇なときに見ること</p>
+            <br>
+            <p>バグなどが見つかった場合は、何かしらの方法でお伝えください。</p>
+            <button class="agree" onclick="agree()">同意する</button>
+            <button class="disagree" onclick="disagree()">同意しない</button>
+        </div>
     </div>
 </body>
 </html>
