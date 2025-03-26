@@ -3,13 +3,13 @@ body {
     background-color: black;
     color: gold;
     text-align: center;
-    padding: 50px;
+    padding: 5px;
 }
 
 .container {
-    max-width: 600px;
+    max-width: 90%;
     margin: auto;
-    padding: 20px;
+    padding: 10px;
     border: 2px solid gold;
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.1);
