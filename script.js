@@ -1,31 +1,22 @@
-window.onload = function() {
-    if (localStorage.getItem("visited")) {
-        console.log("以前アクセスしたことがあります。");
-    } else {
-        showPopup()    }
-};
+let quotes = [];
 
-function randomWisdom() {
-    const maxVol = 11;
-    const randomVol = Math.floor(Math.random() * maxVol) + 1;
-    window.location.href = `vol/${randomVol}.html`;
+async function loadQuotes() {
+    try {
+        const res = await fetch('data.json');
+        quotes = await res.json();
+        showRandomQuote();
+    } catch (e) {
+        document.getElementById('body').textContent = 'データの読み込みに失敗しました。';
+        console.error(e);
+    }
 }
 
-function showPopup() {
-    document.getElementById('popup').style.display = 'flex';
+function showRandomQuote() {
+    if (quotes.length === 0) return;
+    const entry = quotes[Math.floor(Math.random() * quotes.length)];
+    document.getElementById('title').textContent = entry.title;
+    document.getElementById('body').textContent = entry.body;
 }
 
-function closePopup() {
-    document.getElementById('popup').style.display = 'none';
-}
-
-function agree() {
-    localStorage.setItem("visited", "true");
-    closePopup()
-}
-
-function disagree() {
-    localStorage.clear();
-    document.body.innerHTML = "<h1>アクセス拒否</h1><p>このページにはアクセスできません。</p>";
-    return;
-}
+document.getElementById('next').addEventListener('click', showRandomQuote);
+loadQuotes();

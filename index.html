@@ -2,41 +2,17 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>佐原の悟り</title>
+    <title>迷言</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <h1>佐原の悟り</h1>
-        <ul>
-            <li><a href="vol/1.html">vol.1 - なくなって良い物とそうでない物</a></li>
-            <li><a href="vol/2.html">vol.2 - ダンゴムシが削るコンクリート</a></li>
-            <li><a href="vol/3.html">vol.3 - ペンは剣よりも強し</a></li>
-            <li><a href="vol/4.html">vol.4 - 1日の瞬き回数</a></li>
-            <li><a href="vol/5.html">vol.5 - 世界中の蚊が吸う血の量</a></li>
-            <li><a href="vol/6.html">vol.6 - お金とは何か</a></li>
-            <li><a href="vol/7.html">vol.7 - 瞬間移動の真実</a></li>
-            <li><a href="vol/8.html">vol.8 - 空気と酸素</a></li>
-            <li><a href="vol/9.html">vol.9 - 睡眠の重要性</a></li>
-            <li><a href="vol/10.html">vol.10 - 時間の流れ</a></li>
-            <li><a href="vol/11.html">vol.11 - 音の速さと無音</a></li>
-        </ul>
-        <button onclick="randomWisdom()">ランダムに悟る</button>
-        <br>
-        <button onclick="showPopup()">注意事項</button>
+    <h1>わての迷言達</h1>
+    <button id="next">次の一言</button>
+    <div id="quote-box">
+        <div id="title"></div>
+        <div id="body"></div>
     </div>
-    <div id="popup" class="popup">
-        <div class="popup-content">
-            <h2>注意事項</h2>
-            <p>・無断転載禁止</p>
-            <p>・暇なときに見ること</p>
-            <br>
-            <p>バグなどが見つかった場合は、何かしらの方法でお伝えください。</p>
-            <button class="agree" onclick="agree()">同意する</button>
-            <button class="disagree" onclick="disagree()">同意しない</button>
-        </div>
-    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
